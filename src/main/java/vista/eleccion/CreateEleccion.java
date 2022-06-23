@@ -7,6 +7,7 @@ package vista.eleccion;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import controlador.EleccionControl;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,6 +18,8 @@ public class CreateEleccion extends javax.swing.JInternalFrame {
     
     public CreateEleccion() {
         initComponents();
+        
+        this.setLocation(20, 30);
     }
 
     /**
@@ -178,9 +181,12 @@ public class CreateEleccion extends javax.swing.JInternalFrame {
         args[0]=this.jTextField1.getText();
         args[1]=this.jTextField2.getText();
         args[2]=this.jTextField3.getText();
-        args[3]=this.jTextField4.getText();;
+        args[3]=this.jTextField4.getText();
         
-        this.eleccionControl.crear(args);
+        //this.eleccionControl.crear(args);
+        if(JOptionPane.showConfirmDialog(this,"Desea Guardas los Datos: ")==0){
+            this.eleccionControl.crear(args);
+        }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

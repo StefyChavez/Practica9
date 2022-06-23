@@ -7,6 +7,7 @@ package vista.dignidad;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import controlador.DignidadControl;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -19,6 +20,8 @@ public class CreateDignidad extends javax.swing.JInternalFrame {
      */
     public CreateDignidad() {
         initComponents();
+        
+        this.setLocation(510, 30);
     }
 
     /**
@@ -121,21 +124,20 @@ public class CreateDignidad extends javax.swing.JInternalFrame {
                 .addComponent(jButton2)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 488, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(20, Short.MAX_VALUE))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel1)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel3)
                             .addComponent(jLabel4)
                             .addComponent(jLabel5)
                             .addComponent(jLabel6))
-                        .addGap(35, 35, 35)
+                        .addGap(45, 45, 45)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -146,7 +148,7 @@ public class CreateDignidad extends javax.swing.JInternalFrame {
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(0, 0, Short.MAX_VALUE)))
+                                        .addGap(0, 50, Short.MAX_VALUE)))
                                 .addGap(168, 168, 168))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -201,8 +203,12 @@ public class CreateDignidad extends javax.swing.JInternalFrame {
         args[3]=this.jTextField4.getText();
         args[4]=this.jTextField5.getText();
         args[5]=this.jTextField6.getText();
-        dignidadControl.crear(args);
+        //dignidadControl.crear(args);
         System.err.print(args[1]);
+        
+        if(JOptionPane.showConfirmDialog(this,"Desea Guardas los Datos: ")==0){
+            this.dignidadControl.crear(args);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

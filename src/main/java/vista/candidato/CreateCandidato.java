@@ -7,6 +7,7 @@ package vista.candidato;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import controlador.CandidatoControl;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,6 +18,8 @@ public class CreateCandidato extends javax.swing.JInternalFrame {
     
     public CreateCandidato() {
         initComponents();
+        
+        this.setLocation(1060, 30);
     }
 
     /**
@@ -208,7 +211,10 @@ public class CreateCandidato extends javax.swing.JInternalFrame {
         args[3]=this.jTextField4.getText();
         args[4]=this.jComboBox1.getSelectedItem().toString();
         args[5]=this.jTextField5.getText();
-        candidatoControl.crear(args);
+        
+        if(JOptionPane.showConfirmDialog(this,"Desea Guardas los datos ")==0){
+            this.candidatoControl.crear(args);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
