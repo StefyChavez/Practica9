@@ -48,7 +48,7 @@ public class UpdateEleccion extends javax.swing.JInternalFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Modificar Candidato");
+        setTitle("Modificar Elecciones");
 
         jLabel1.setText("Ingrese el código:");
 

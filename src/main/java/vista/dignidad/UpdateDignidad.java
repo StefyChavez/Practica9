@@ -52,7 +52,7 @@ public class UpdateDignidad extends javax.swing.JInternalFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Modificar Candidato");
+        setTitle("Modificar Dignidad");
 
         jLabel1.setText("Ingrese el código:");
 

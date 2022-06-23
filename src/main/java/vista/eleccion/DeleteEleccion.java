@@ -47,7 +47,8 @@ public class DeleteEleccion extends javax.swing.JInternalFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Eleminar Candidato");
+        setResizable(true);
+        setTitle("Eleminar Elecciones");
 
         jLabel1.setText("Ingrese el código:");
 

@@ -51,7 +51,7 @@ public class DeleteDignidad extends javax.swing.JInternalFrame {
         jTextField6 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Eleminar Candidato");
+        setTitle("Eleminar Dignidad");
 
         jLabel1.setText("Ingrese el código:");
 
