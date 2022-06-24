@@ -184,6 +184,8 @@ public class DeleteEleccion extends javax.swing.JInternalFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        
+        JOptionPane.showMessageDialog(this, "Datos Actualizados",
+                " Listar ", JOptionPane.INFORMATION_MESSAGE);
         this.actualizarTable1();
         
     }//GEN-LAST:event_jButton2ActionPerformed

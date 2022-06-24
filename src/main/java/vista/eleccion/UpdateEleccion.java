@@ -183,11 +183,13 @@ public class UpdateEleccion extends javax.swing.JInternalFrame {
         this.eleccionControl.modificar(args);
         
         JOptionPane.showMessageDialog(this, "Usuario actualizado",
-                "Modificar Eleccion", JOptionPane.ERROR_MESSAGE);
+                "Modificar Eleccion", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        
+        JOptionPane.showMessageDialog(this, "Datos Actualizados",
+                " Listar ", JOptionPane.INFORMATION_MESSAGE);
         this.actualizarTable1();
         
     }//GEN-LAST:event_jButton2ActionPerformed
