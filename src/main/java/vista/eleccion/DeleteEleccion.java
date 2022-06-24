@@ -81,7 +81,6 @@ public class DeleteEleccion extends javax.swing.JInternalFrame {
         jTextField2.setColumns(30);
 
         jTextField3.setColumns(30);
-        jTextField3.setText(" ");
 
         jTextField4.setColumns(30);
 

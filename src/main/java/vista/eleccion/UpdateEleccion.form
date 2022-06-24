@@ -192,7 +192,6 @@
         <Component class="javax.swing.JTextField" name="jTextField3">
           <Properties>
             <Property name="columns" type="int" value="30"/>
-            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField4">
