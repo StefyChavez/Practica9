@@ -87,7 +87,11 @@ public class UpdateDignidad extends javax.swing.JInternalFrame {
         jTextField2.setColumns(30);
 
         jTextField3.setColumns(30);
-        jTextField3.setText(" ");
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
 
         jTextField4.setColumns(30);
 
@@ -231,6 +235,10 @@ public class UpdateDignidad extends javax.swing.JInternalFrame {
         this.jTextField6.setText(String.valueOf(dignidad.getEleccion().getCodigo()));
         
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
 
     private void actualizarTable1(){
         
