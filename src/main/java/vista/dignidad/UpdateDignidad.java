@@ -211,7 +211,7 @@ public class UpdateDignidad extends javax.swing.JInternalFrame {
         this.dignidadControl.modificar(args);
         
         JOptionPane.showMessageDialog(this, "Usuario actualizado",
-                "Modificar Candidato", JOptionPane.ERROR_MESSAGE);
+                "Modificar Dignidad", JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

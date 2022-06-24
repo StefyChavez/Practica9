@@ -91,7 +91,7 @@ public class CreateCandidato extends javax.swing.JInternalFrame {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "Código", "Nombre", "Apellido", "Título Universitario", "Género", "Dignidad"
+                "Código", "Nombre", "Apellido", "T[itulo Universitario", "Género", "Dignidad"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -126,7 +126,7 @@ public class CreateCandidato extends javax.swing.JInternalFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 439, Short.MAX_VALUE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 450, Short.MAX_VALUE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -140,9 +140,9 @@ public class CreateCandidato extends javax.swing.JInternalFrame {
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jTextField3)
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
-                                        .addComponent(jTextField4))
-                                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE))
+                                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addGap(20, 20, 20))))
         );
@@ -163,13 +163,13 @@ public class CreateCandidato extends javax.swing.JInternalFrame {
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -208,8 +208,8 @@ public class CreateCandidato extends javax.swing.JInternalFrame {
         args[0]=this.jTextField2.getText();
         args[1]=this.jTextField1.getText();
         args[2]=this.jTextField3.getText();
-        args[3]=this.jTextField4.getText();
-        args[4]=this.jComboBox1.getSelectedItem().toString();
+        args[3]=this.jComboBox1.getSelectedItem().toString();
+        args[4]=this.jTextField4.getText();
         args[5]=this.jTextField5.getText();
         
         if(JOptionPane.showConfirmDialog(this,"Desea Guardas los datos ")==0){
@@ -219,6 +219,8 @@ public class CreateCandidato extends javax.swing.JInternalFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "Datos Actualizados",
+                "Guardar ", JOptionPane.INFORMATION_MESSAGE);
         
        this.actualizarTabla();
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -229,8 +231,8 @@ public class CreateCandidato extends javax.swing.JInternalFrame {
         encabezado[0]="Código";
         encabezado[1]="Nombre";
         encabezado[2]="Apellido";
-        encabezado[3]="Título Universitario";
-        encabezado[4]="Género";
+        encabezado[3]="Género";
+        encabezado[4]="Título Universitario";
         encabezado[5]="Dignidad";
         
         var datos = new Object[this.candidatoControl.listar().size()][6];
@@ -241,8 +243,8 @@ public class CreateCandidato extends javax.swing.JInternalFrame {
             datos[i][0]=candidato.getCodigo();
             datos[i][1]=candidato.getNombre();
             datos[i][2]=candidato.getApeliido();
-            datos[i][3]=candidato.getTituloUniversitario();
-            datos[i][4]=candidato.getGenero();
+            datos[i][3]=candidato.getGenero();
+            datos[i][4]=candidato.getTituloUniversitario();
             datos[i][5]=candidato.getDignidad().getCargoPolitico();
             i++;
         }

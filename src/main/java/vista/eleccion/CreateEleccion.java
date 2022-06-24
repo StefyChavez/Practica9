@@ -193,6 +193,8 @@ public class CreateEleccion extends javax.swing.JInternalFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        
         this.actualizarTable1();
+        JOptionPane.showMessageDialog(this, "Datos Actualizados",
+                "Guardar ", JOptionPane.INFORMATION_MESSAGE);
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
